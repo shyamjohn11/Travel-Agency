@@ -1,0 +1,266 @@
+.contact-final-cta {
+  position: relative;
+  width: 100%;
+  min-height: 650px;
+  padding: 100px 6% 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #171614;
+  color: #fff;
+}
+
+/* BACKGROUND */
+
+.contact-final-background {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.contact-final-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  transform: scale(1.02);
+}
+
+.contact-final-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(12, 12, 11, 0.55) 0%,
+    rgba(12, 12, 11, 0.73) 48%,
+    rgba(12, 12, 11, 0.88) 100%
+  );
+}
+
+/* CONTENT */
+
+.contact-final-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
+/* EYEBROW */
+
+.contact-final-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  color: #e9e4dc;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2.8px;
+}
+
+.contact-final-eyebrow span {
+  width: 28px;
+  height: 1px;
+  background: #FFAA33;
+}
+
+/* COMPASS */
+
+.contact-final-compass {
+  width: 66px;
+  height: 66px;
+  margin: 32px auto 24px;
+  display: grid;
+  place-items: center;
+  color: #FFAA33;
+  border: 1px solid rgba(255, 170, 51, 0.5);
+  border-radius: 50%;
+}
+
+/* HEADING */
+
+.contact-final-content h2 {
+  margin: 0;
+  font-size: clamp(48px, 7.2vw, 88px);
+  line-height: 1.04;
+  letter-spacing: -4px;
+  font-weight: 750;
+}
+
+.contact-final-content h2 span {
+  color: #FFAA33;
+}
+
+/* DESCRIPTION */
+
+.contact-final-content > p {
+  max-width: 610px;
+  margin: 25px auto 0;
+  color: rgba(255, 170, 51, 0.75);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+/* BUTTONS */
+
+.contact-final-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 35px;
+}
+
+.contact-final-primary,
+.contact-final-secondary {
+  min-height: 54px;
+  padding: 0 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  border-radius: 9px;
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 850;
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.contact-final-primary {
+  background: #FFAA33;
+  color: #111;
+}
+
+.contact-final-primary:hover {
+  background: #f2a326;
+  transform: translateY(-3px);
+}
+
+.contact-final-secondary {
+  color: #fff;
+  border: 1px solid rgba(255, 170, 51, 0.55);
+  background: rgba(255, 170, 51, 0.06);
+  backdrop-filter: blur(8px);
+}
+
+.contact-final-secondary:hover {
+  border-color: #FFAA33;
+  background: rgba(255, 170, 51, 0.12);
+  transform: translateY(-3px);
+}
+
+/* BOTTOM BRAND STRIP */
+
+.contact-final-bottom {
+  margin-top: 95px;
+  padding-top: 23px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  border-top: 1px solid rgba(255, 170, 51, 0.25);
+}
+
+.contact-final-bottom span {
+  color: rgba(255, 170, 51, 0.65);
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+}
+
+.contact-final-bottom span:first-child {
+  color: #FFAA33;
+  font-size: 11px;
+  letter-spacing: 2.5px;
+}
+
+/* TABLET */
+
+@media (max-width: 850px) {
+  .contact-final-cta {
+    min-height: 600px;
+    padding: 85px 5% 30px;
+  }
+
+  .contact-final-content h2 {
+    font-size: clamp(48px, 8vw, 70px);
+    letter-spacing: -2.5px;
+  }
+
+  .contact-final-bottom {
+    margin-top: 75px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .contact-final-cta {
+    min-height: 620px;
+    padding: 75px 6% 25px;
+  }
+
+  .contact-final-eyebrow {
+    gap: 8px;
+    font-size: 8px;
+    letter-spacing: 1.6px;
+  }
+
+  .contact-final-eyebrow span {
+    width: 17px;
+  }
+
+  .contact-final-compass {
+    width: 55px;
+    height: 55px;
+    margin: 28px auto 22px;
+  }
+
+  .contact-final-content h2 {
+    font-size: clamp(42px, 11vw, 58px);
+    letter-spacing: -1.8px;
+  }
+
+  .contact-final-content > p {
+    margin-top: 20px;
+    font-size: 12px;
+  }
+
+  .contact-final-actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .contact-final-primary,
+  .contact-final-secondary {
+    width: 100%;
+    min-height: 51px;
+  }
+
+  .contact-final-bottom {
+    margin-top: 65px;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .contact-final-bottom span {
+    text-align: center;
+    line-height: 1.6;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contact-final-primary,
+  .contact-final-secondary {
+    transition: none;
+  }
+}

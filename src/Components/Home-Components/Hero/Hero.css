@@ -1,0 +1,237 @@
+/* =========================================
+   RJ GROUPS - CINEMATIC HERO
+========================================= */
+
+.travel-hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  height: 100svh;
+  min-height: 550px;
+
+  overflow: hidden;
+  isolation: isolate;
+
+  background: #080808;
+}
+
+/* =========================================
+   BACKGROUND IMAGES
+========================================= */
+
+.hero-backgrounds {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+
+  overflow: hidden;
+}
+
+.hero-slide {
+  position: absolute;
+  inset: 0;
+
+  opacity: 0;
+
+  will-change: transform, opacity;
+}
+
+.hero-slide img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+/* =========================================
+   CINEMATIC OVERLAY
+========================================= */
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+
+  z-index: -1;
+
+  pointer-events: none;
+
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.12) 0%,
+    rgba(0, 0, 0, 0.2) 45%,
+    rgba(0, 0, 0, 0.55) 100%
+  );
+}
+
+/* =========================================
+   HERO CONTENT
+========================================= */
+
+.hero-content {
+  position: absolute;
+  inset: 0;
+
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  padding: 24px;
+
+  text-align: center;
+}
+
+/* =========================================
+   HERO HEADING
+========================================= */
+
+.hero-slogan {
+  max-width: 750px;
+
+  margin: 0 0 24px;
+
+  color: #ffffff;
+
+  font-size: clamp(22px, 3.2vw, 42px);
+  font-weight: 700;
+
+  line-height: 1.2;
+  letter-spacing: -1px;
+
+  text-shadow: 0 4px 25px rgba(0, 0, 0, 0.45);
+}
+
+.hero-slogan span {
+  color: #FFAA33;
+}
+
+/* =========================================
+   EXPLORE BUTTON
+========================================= */
+
+.hero-button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  padding: 13px 23px;
+
+  background: #FFAA33;
+  color: #111111;
+
+  border: 1px solid #FFAA33;
+  border-radius: 50px;
+
+  text-decoration: none;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 0.3px;
+
+  transition:
+    background 0.35s ease,
+    color 0.35s ease,
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.hero-button:hover {
+  background: #e5e4e2;
+
+  border-color: #e5e4e2;
+
+  color: #111111;
+
+  transform: translateY(-3px);
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.hero-button svg {
+  width: 16px;
+  height: 16px;
+
+  transition: transform 0.3s ease;
+}
+
+.hero-button:hover svg {
+  transform: translate(3px, -3px);
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1024px) {
+  .hero-slogan {
+    font-size: clamp(24px, 4vw, 36px);
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 767px) {
+  .travel-hero {
+    min-height: 500px;
+  }
+
+  .hero-content {
+    padding: 20px;
+  }
+
+  .hero-slogan {
+    max-width: 420px;
+
+    margin-bottom: 20px;
+
+    font-size: clamp(22px, 6vw, 30px);
+
+    line-height: 1.3;
+    letter-spacing: -0.6px;
+  }
+
+  .hero-button {
+    padding: 12px 20px;
+
+    font-size: 11px;
+
+    gap: 10px;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+  .hero-slogan {
+    font-size: 21px;
+  }
+
+  .hero-button {
+    padding: 11px 18px;
+  }
+}
+
+/* =========================================
+   ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-button,
+  .hero-button svg {
+    transition: none;
+  }
+}

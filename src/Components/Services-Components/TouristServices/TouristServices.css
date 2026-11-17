@@ -1,0 +1,73 @@
+.tourist-services {
+    padding: 40px 20px;
+    background: #ffffff;
+}
+
+.tourist-services-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tourist-services-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    color: #171717;
+}
+
+.tourist-filters {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.tourist-category-btn {
+    padding: 8px 16px;
+    border: 1px solid #eaeaea;
+    border-radius: 50px;
+    background: #ffffff;
+    color: #444;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tourist-category-btn.active {
+    background: #FFAA33;
+    color: #171717;
+    border-color: #FFAA33;
+}
+
+.tp-category-btn.active:hover {
+    color: #ffffff;
+    background: rgba(255, 170, 51, 0.13);
+    border-color: rgba(255, 170, 51, 0.17);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    transform: translateY(-2px);
+}
+
+.tourist-category-btn:hover {
+    border-color: #FFAA33;
+}
+
+.tourist-services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 24px;
+}
+
+.tourist-card {
+    border: 1px solid #eaeaea;
+    border-radius: 12px;
+    padding: 20px;
+    background: #ffffff;
+}
+
+.tourist-card h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #171717;
+}

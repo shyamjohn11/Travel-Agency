@@ -1,0 +1,242 @@
+.travel-story {
+  width: 100%;
+  padding: 0;
+  background: #e5e4e2;
+  overflow: hidden;
+}
+
+.travel-story-image {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 590px;
+  height: 78vh;
+  max-height: 780px;
+  overflow: hidden;
+  background: #252525;
+  color: #fff;
+  isolation: isolate;
+}
+
+.travel-story-image > img {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.travel-story-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.78) 0%,
+      rgba(0, 0, 0, 0.48) 45%,
+      rgba(0, 0, 0, 0.08) 100%
+    ),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.4), transparent 25%);
+}
+
+/* Content */
+
+.travel-story-content {
+  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 60px 5%;
+}
+
+.travel-story-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 25px;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.travel-story-label svg {
+  color: #FFAA33;
+}
+
+.travel-story-content h2 {
+  margin: 0;
+  font-size: clamp(48px, 7vw, 88px);
+  line-height: 0.98;
+  letter-spacing: -4px;
+  font-weight: 800;
+}
+
+.travel-story-content h2 span {
+  color: #FFAA33;
+}
+
+.travel-story-content > p {
+  max-width: 490px;
+  margin: 25px 0 28px;
+  color: rgba(255, 170, 51, 0.85);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+/* Actions */
+
+.travel-story-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 22px;
+}
+
+.travel-story-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 25px;
+  padding: 8px 9px 8px 20px;
+  border-radius: 50px;
+  background: #FFAA33;
+  color: #111;
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 800;
+  transition: 0.3s ease;
+}
+
+.travel-story-button svg {
+  width: 32px;
+  height: 32px;
+  padding: 7px;
+  border-radius: 50%;
+  background: #111;
+  color: #fff;
+  transition: transform 0.3s ease;
+}
+
+.travel-story-button:hover {
+  background: #fff;
+  transform: translateY(-3px);
+}
+
+.travel-story-button:hover svg {
+  transform: rotate(45deg);
+}
+
+.travel-story-caption {
+  color: rgba(255, 170, 51, 0.75);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+
+/* Bottom Details */
+
+.travel-story-bottom {
+  position: absolute;
+  right: 5%;
+  bottom: 25px;
+  left: 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding-top: 17px;
+  border-top: 1px solid rgba(255, 170, 51, 0.35);
+  color: rgba(255, 170, 51, 0.8);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.travel-story-scroll {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.travel-story-scroll svg {
+  color: #FFAA33;
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+  .travel-story-image {
+    min-height: 560px;
+    height: 70vh;
+  }
+
+  .travel-story-content h2 {
+    font-size: 68px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .travel-story-image {
+    min-height: 600px;
+    height: 78vh;
+    max-height: 720px;
+  }
+
+  .travel-story-image > img {
+    object-position: 58% center;
+  }
+
+  .travel-story-overlay {
+    background:
+      linear-gradient(90deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.25)),
+      linear-gradient(0deg, rgba(0, 0, 0, 0.55), transparent 65%);
+  }
+
+  .travel-story-content {
+    padding: 35px 6%;
+  }
+
+  .travel-story-label {
+    margin-bottom: 20px;
+    font-size: 9px;
+  }
+
+  .travel-story-content h2 {
+    font-size: clamp(46px, 12vw, 62px);
+    letter-spacing: -2.5px;
+  }
+
+  .travel-story-content > p {
+    max-width: 360px;
+    font-size: 12px;
+    line-height: 1.8;
+  }
+
+  .travel-story-actions {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .travel-story-bottom {
+    bottom: 17px;
+    font-size: 7px;
+    letter-spacing: 0.8px;
+  }
+
+  .travel-story-bottom > span:last-child {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .travel-story-button,
+  .travel-story-button svg {
+    transition: none;
+  }
+}

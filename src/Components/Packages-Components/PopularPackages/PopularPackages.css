@@ -1,0 +1,583 @@
+/* =========================================
+   POPULAR PACKAGES
+========================================= */
+
+.popular-packages {
+  width: 100%;
+  padding: 65px 5%;
+  background: #e5e4e2;
+  color: #111111;
+  overflow: clip;
+}
+
+.popular-packages-container {
+  width: 100%;
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.popular-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 25px;
+  margin-bottom: 32px;
+}
+
+.popular-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #777777;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+}
+
+.popular-eyebrow span {
+  width: 7px;
+  height: 7px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #FFAA33;
+}
+
+.popular-header h2 {
+  margin: 12px 0 0;
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: 1.02;
+  letter-spacing: -2px;
+  font-weight: 800;
+}
+
+.popular-header h2 span {
+  color: #e99a22;
+}
+
+.popular-header-right {
+  max-width: 310px;
+  padding-bottom: 3px;
+}
+
+.popular-header-right p {
+  margin: 0 0 13px;
+  color: #777777;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.popular-all-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #FFAA33;
+  color: #111111;
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 700;
+  transition: color 0.25s ease;
+}
+
+.popular-all-link:hover {
+  color: #FFAA33;
+}
+
+/* =========================================
+   STACK INTRO
+========================================= */
+
+.popular-stack-wrapper {
+  position: relative;
+}
+
+.popular-stack-intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  margin-bottom: 15px;
+  border-top: 1px solid #e8e8e8;
+  color: #888888;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+
+/* =========================================
+   STICKY DESTINATION CARDS
+========================================= */
+
+.popular-stack {
+  position: relative;
+  isolation: isolate;
+}
+
+.popular-stack-card {
+  position: sticky;
+  top: 82px;
+  width: 100%;
+  height: 310px;
+  margin-bottom: 19vh;
+  overflow: hidden;
+  border: 1px solid #ededed;
+  border-radius: 13px;
+  background: #ffffff;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.07);
+  transform-origin: center top;
+  will-change: transform, opacity;
+}
+
+.popular-stack-card:last-child {
+  margin-bottom: 8vh;
+}
+
+/* =========================================
+   CARD LINK AND LAYOUT
+========================================= */
+
+.popular-stack-link {
+  display: grid;
+  grid-template-columns: 1fr 0.95fr;
+  width: 100%;
+  height: 100%;
+  color: inherit;
+  text-decoration: none;
+}
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.popular-stack-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  overflow: hidden;
+  background: #e9e9e9;
+}
+
+.popular-stack-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.7s ease;
+}
+
+.popular-stack-card:hover .popular-stack-image img {
+  transform: scale(1.04);
+}
+
+.popular-stack-image-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.28),
+    transparent 42%,
+    rgba(0, 0, 0, 0.3)
+  );
+}
+
+.popular-stack-number {
+  position: absolute;
+  z-index: 2;
+  top: 15px;
+  left: 17px;
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+}
+
+.popular-stack-category {
+  position: absolute;
+  z-index: 2;
+  bottom: 15px;
+  left: 17px;
+  padding: 6px 10px;
+  border-radius: 30px;
+  background: #FFAA33;
+  color: #171717;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
+
+.popular-stack-image-arrow {
+  position: absolute;
+  z-index: 2;
+  top: 13px;
+  right: 14px;
+  display: grid;
+  width: 32px;
+  height: 32px;
+  place-items: center;
+  border: 1px solid rgba(255, 170, 51, 0.75);
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.popular-stack-card:hover .popular-stack-image-arrow {
+  transform: rotate(45deg);
+  border-color: #FFAA33;
+  background: #FFAA33;
+  color: #111111;
+}
+
+/* =========================================
+   CARD CONTENT
+========================================= */
+
+.popular-stack-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+  padding: 24px 30px;
+  background: #ffffff;
+}
+
+.popular-stack-location {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #888888;
+  font-size: 10px;
+}
+
+.popular-stack-location svg {
+  flex-shrink: 0;
+  color: #e99b24;
+}
+
+.popular-stack-content h3 {
+  max-width: 350px;
+  margin: 13px 0 9px;
+  color: #151515;
+  font-size: clamp(24px, 2.8vw, 34px);
+  line-height: 1.12;
+  letter-spacing: -1.2px;
+  font-weight: 800;
+}
+
+.popular-stack-content > p {
+  max-width: 330px;
+  margin: 0;
+  color: #777777;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+.popular-stack-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 13px;
+  border-top: 1px solid #eeeeee;
+}
+
+.popular-stack-bottom > span {
+  color: #333333;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+}
+
+.popular-stack-bottom-arrow {
+  display: grid;
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  place-items: center;
+  border-radius: 50%;
+  background: #FFAA33;
+  color: #111111;
+  transition: transform 0.3s ease;
+}
+
+.popular-stack-card:hover .popular-stack-bottom-arrow {
+  transform: translateX(4px);
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.popular-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+  padding-top: 17px;
+  border-top: 1px solid #e8e8e8;
+}
+
+.popular-footer > div {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.popular-footer-dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #FFAA33;
+}
+
+.popular-footer p {
+  margin: 0;
+  color: #777777;
+  font-size: 12px;
+}
+
+.popular-enquiry-btn {
+  display: inline-flex;
+  min-height: 37px;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 0 16px;
+  border-radius: 5px;
+  background: #FFAA33;
+  color: #111111;
+  text-decoration: none;
+  font-size: 10px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.popular-enquiry-btn:hover {
+  background: #111111;
+  color: #ffffff;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+  .popular-packages {
+    padding: 58px 5%;
+  }
+
+  .popular-stack-card {
+    top: 75px;
+    height: 285px;
+    margin-bottom: 17vh;
+  }
+
+  .popular-stack-content {
+    padding: 20px;
+  }
+
+  .popular-stack-content h3 {
+    font-size: 27px;
+  }
+}
+
+/* =========================================
+   SMALL TABLET
+========================================= */
+
+@media (max-width: 768px) {
+  .popular-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 27px;
+  }
+
+  .popular-header-right {
+    max-width: 420px;
+  }
+
+  .popular-stack-card {
+    height: 270px;
+    top: 70px;
+  }
+
+  .popular-stack-link {
+    grid-template-columns: 1fr 0.9fr;
+  }
+
+  .popular-stack-content {
+    padding: 17px;
+  }
+
+  .popular-stack-content h3 {
+    font-size: 24px;
+  }
+
+  .popular-stack-content > p {
+    font-size: 10px;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+  .popular-packages {
+    padding: 48px 5%;
+  }
+
+  .popular-header {
+    margin-bottom: 24px;
+  }
+
+  .popular-header h2 {
+    font-size: 36px;
+    letter-spacing: -1.6px;
+  }
+
+  .popular-header-right p {
+    font-size: 11px;
+    margin-bottom: 11px;
+  }
+
+  .popular-stack-intro {
+    font-size: 7px;
+    letter-spacing: 0.6px;
+  }
+
+  /* Normal card flow on mobile prevents sticky overlap */
+  .popular-stack-card {
+    position: relative;
+    top: auto;
+    height: auto;
+    margin-bottom: 16px;
+    border-radius: 11px;
+  }
+
+  .popular-stack-card:last-child {
+    margin-bottom: 0;
+  }
+
+  .popular-stack-link {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+
+  .popular-stack-image {
+    height: 170px;
+    flex-shrink: 0;
+  }
+
+  .popular-stack-content {
+    min-height: 165px;
+    padding: 15px;
+  }
+
+  .popular-stack-content h3 {
+    margin: 9px 0 7px;
+    font-size: 23px;
+    letter-spacing: -0.8px;
+  }
+
+  .popular-stack-content > p {
+    font-size: 10px;
+    line-height: 1.6;
+  }
+
+  .popular-stack-bottom {
+    margin-top: 14px;
+    padding-top: 10px;
+  }
+
+  .popular-stack-bottom > span {
+    font-size: 8px;
+  }
+
+  .popular-stack-bottom-arrow {
+    width: 29px;
+    height: 29px;
+  }
+
+  .popular-stack-number {
+    top: 12px;
+    left: 13px;
+  }
+
+  .popular-stack-category {
+    bottom: 12px;
+    left: 13px;
+  }
+
+  .popular-stack-image-arrow {
+    top: 10px;
+    right: 11px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .popular-footer {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 18px;
+  }
+
+  .popular-enquiry-btn {
+    width: 100%;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 360px) {
+  .popular-header h2 {
+    font-size: 32px;
+  }
+
+  .popular-stack-image {
+    height: 150px;
+  }
+
+  .popular-stack-content {
+    padding: 13px;
+  }
+
+  .popular-stack-content h3 {
+    font-size: 21px;
+  }
+}
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .popular-stack-card,
+  .popular-stack-image img,
+  .popular-stack-image-arrow,
+  .popular-stack-bottom-arrow,
+  .popular-enquiry-btn,
+  .popular-all-link {
+    scroll-behavior: auto !important;
+    transition: none !important;
+    animation: none !important;
+  }
+}

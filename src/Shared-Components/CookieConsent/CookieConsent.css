@@ -1,0 +1,11 @@
+.rj-cookie{position:fixed;left:20px;bottom:20px;z-index:99990;width:min(440px,calc(100vw - 32px));background:#111;color:#f2f2f2;border-radius:18px;padding:22px;box-shadow:0 25px 70px rgba(0,0,0,.35);border:1px solid rgba(255, 170, 51,.35)}
+.rj-cookie p{font-size:13.5px;line-height:1.6;color:#cfcfcf;margin:10px 0 14px}
+.rj-cookie a{color:#FFAA33;text-decoration:underline}
+.rj-cookie-head{display:flex;align-items:center;gap:8px;color:#FFAA33}
+.rj-cookie-x{position:absolute;top:12px;right:12px;background:none;border:0;color:#aaa;cursor:pointer}
+.rj-cookie-opts{display:grid;gap:8px;margin-bottom:14px;font-size:13.5px}
+.rj-cookie-opts label{display:flex;align-items:center;gap:8px}
+.rj-cookie-opts small{color:#8a8a8a}
+.rj-cookie-actions{display:flex;flex-wrap:wrap;gap:8px}
+.rj-cookie-actions button{flex:1 1 auto;padding:10px 14px;font-size:13px}
+@media (max-width:520px){.rj-cookie{left:12px;right:12px;bottom:12px;width:auto}}

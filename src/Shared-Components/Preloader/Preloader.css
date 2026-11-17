@@ -1,0 +1,20 @@
+.rj-preloader{position:fixed;inset:0;z-index:100000;background:radial-gradient(circle at 50% 40%,#242424 0%,#111 70%);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px}
+.rj-pl-stage{position:relative;width:200px;height:200px;perspective:700px;display:grid;place-items:center}
+.rj-pl-globe{position:absolute;inset:0;transform-style:preserve-3d;animation:rjSpin 9s linear infinite}
+.rj-pl-ring{position:absolute;inset:0;border-radius:50%;border:2px solid rgba(255, 170, 51,.85);box-shadow:0 0 18px rgba(255, 170, 51,.35)}
+.rj-pl-ring.r1{transform:rotateY(0deg)}
+.rj-pl-ring.r2{transform:rotateY(60deg)}
+.rj-pl-ring.r3{transform:rotateY(120deg)}
+.rj-pl-core{position:absolute;inset:34px;border-radius:50%;background:radial-gradient(circle at 30% 30%,rgba(255, 170, 51,.25),rgba(255, 170, 51,.02));border:1px solid rgba(255, 170, 51,.3)}
+.rj-pl-orbit{position:absolute;inset:-14px;border-radius:50%;animation:rjOrbit 2.4s linear infinite;color:#FFAA33}
+.rj-pl-orbit svg{position:absolute;top:-4px;left:50%;transform:translateX(-50%) rotate(90deg);filter:drop-shadow(0 0 8px rgba(255, 170, 51,.8))}
+.rj-pl-logo{position:relative;width:78px;height:78px;object-fit:contain;border-radius:50%;background:#fff;padding:6px;animation:rjFloat 2.2s ease-in-out infinite}
+.rj-pl-text{display:flex;font-weight:850;letter-spacing:.35em;font-size:clamp(20px,4vw,30px);margin-top:18px}
+.rj-pl-sub{font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:#FFAA33}
+.rj-pl-bar{width:min(260px,70vw);height:3px;border-radius:99px;background:rgba(255,255,255,.14);overflow:hidden;margin-top:10px}
+.rj-pl-bar span{display:block;height:100%;background:linear-gradient(90deg,#FFAA33,#FFAA33);border-radius:99px}
+.rj-pl-pct{font-size:12px;color:rgba(255,255,255,.6);font-variant-numeric:tabular-nums}
+@keyframes rjSpin{to{transform:rotateX(18deg) rotateY(360deg)}}
+@keyframes rjOrbit{to{transform:rotate(360deg)}}
+@keyframes rjFloat{50%{transform:translateY(-6px)}}
+@media (prefers-reduced-motion:reduce){.rj-pl-globe,.rj-pl-orbit,.rj-pl-logo{animation:none}}
